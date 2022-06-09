@@ -1,4 +1,4 @@
-<?php
+<?html
 
 // Make the page validate
 ini_set('session.use_trans_sid', '0');
@@ -49,7 +49,7 @@ $_SESSION['captcha_id'] = $str;
 	
 	<body class="bg-pink">
 		<div class="body">
-			<form action="demo-contacts-process.php" method="post" id="sky-form" class="sky-form">
+			<form action="demo-contacts-process.html" method="post" id="sky-form" class="sky-form">
 				<header>Contacts form</header>
 				
 				<fieldset>					
@@ -89,7 +89,7 @@ $_SESSION['captcha_id'] = $str;
 					<section>
 						<label class="label">Enter characters below:</label>
 						<label class="input input-captcha">
-							<img src="captcha/image.php?<?php echo time(); ?>" width="100" height="35" alt="Captcha image" />
+							<img src="captcha/image.html?<?html echo time(); ?>" width="100" height="35" alt="Captcha image" />
 							<input type="text" maxlength="6" name="captcha" id="captcha">
 						</label>
 					</section>
@@ -136,7 +136,7 @@ $_SESSION['captcha_id'] = $str;
 						captcha:
 						{
 							required: true,
-							remote: 'captcha/process.php'
+							remote: 'captcha/process.html'
 						}
 					},
 										

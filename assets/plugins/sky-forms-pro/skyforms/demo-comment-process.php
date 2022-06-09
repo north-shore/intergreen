@@ -1,6 +1,6 @@
-<?php
+<?html
 if( isset($_POST['submit']) )
 {
-	// Your PHP code here
+	// Your html code here
 }
 ?>

@@ -1,14 +1,14 @@
- <?php
+ <?html
 
 session_start();
- include 'header.php';
-require_once('library.php');
+ include 'header.html';
+require_once('library.html');
 $error = "";
 if(isset($_POST['txtusername'])){
 	$error = checkUser($_POST['txtusername'],$_POST['txtpassword'],$_POST['OfficeName']);
 }//if
 
-require_once('database.php');
+require_once('database.html');
  $server = "localhost";
   $user ="root";
   $pass ="";
@@ -91,7 +91,7 @@ function memloginvalidate()
                                     <div class="register-photo">
                                         <div class="form-container">
                                             <font color="#FF0000" style="font-size:12px;">
-                                                <?php echo $error; ?>
+                                                <?html echo $error; ?>
                                             </font>
                                             <div class="image-holder" style="/*margin-left: -1em;*/"></div>
                                             <form method="post">
@@ -121,6 +121,6 @@ function memloginvalidate()
       
 
 
- <?php
- include 'footer.php';
+ <?html
+ include 'footer.html';
 			?>

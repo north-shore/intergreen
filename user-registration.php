@@ -1,7 +1,7 @@
-<?php
-use Phppot\Member;
+<?html
+use htmlpot\Member;
 if (! empty($_POST["signup-btn"])) {
-    require_once './Model/Member.php';
+    require_once './Model/Member.html';
     $member = new Member();
     $registrationResponse = $member->registerMember();
 }
@@ -9,7 +9,7 @@ if (! empty($_POST["signup-btn"])) {
 <HTML>
 <HEAD>
 <TITLE>Login</TITLE>
-	<link href="assets/css/phppot-style.css" type="text/css"rel="stylesheet" />
+	<link href="assets/css/htmlpot-style.css" type="text/css"rel="stylesheet" />
 	<link href="assets/css/user-registration.css" type="text/css"rel="stylesheet" />
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -35,28 +35,28 @@ if (! empty($_POST["signup-btn"])) {
         <div class="form-container">
             <div class="image-holder" style="/*margin-left: -1em;*/"></div>
 
-				<a href="login.php">Login</a>
+				<a href="login.html">Login</a>
 				<h2 class="text-center"><strong>Create</strong> an account.</h2>
 			</div>
 			<div class="">
 				<form name="sign-up" action="" method="post"
 					onsubmit="return signupValidation()">
 					<div class="signup-heading">Owl Steel</div>
-				<?php
+				<?html
     if (! empty($registrationResponse["status"])) {
         ?>
-                    <?php
+                    <?html
         if ($registrationResponse["status"] == "error") {
             ?>
-				    <div class="server-response error-msg"><?php echo $registrationResponse["message"]; ?></div>
-                    <?php
+				    <div class="server-response error-msg"><?html echo $registrationResponse["message"]; ?></div>
+                    <?html
         } else if ($registrationResponse["status"] == "success") {
             ?>
-                    <div class="server-response success-msg"><?php echo $registrationResponse["message"]; ?></div>
-                    <?php
+                    <div class="server-response success-msg"><?html echo $registrationResponse["message"]; ?></div>
+                    <?html
         }
         ?>
-				<?php
+				<?html
     }
     ?>
 

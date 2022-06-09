@@ -1,8 +1,8 @@
-<?php
-use Phppot\Member;
+<?html
+use htmlpot\Member;
 
 if (! empty($_POST["login-btn"])) {
-    require_once __DIR__ . '/Model/Member.php';
+    require_once __DIR__ . '/Model/Member.html';
     $member = new Member();
     $loginResult = $member->loginMember();
 }
@@ -10,7 +10,7 @@ if (! empty($_POST["login-btn"])) {
 <HTML>
 <HEAD>
 <TITLE>Login</TITLE>
-	<link href="assets/css/phppot-style.css" type="text/css"rel="stylesheet" />
+	<link href="assets/css/htmlpot-style.css" type="text/css"rel="stylesheet" />
 	<link href="assets/css/user-registration.css" type="text/css"rel="stylesheet" />
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -32,18 +32,18 @@ if (! empty($_POST["login-btn"])) {
 <script src="vendor/jquery/jquery-3.3.1.js" type="text/javascript"></script>
 </HEAD>
 <BODY>
-	<div class="phppot-container">
+	<div class="htmlpot-container">
 		<div class="sign-up-container">
 			<div class="login-signup">
-				<a href="user-registration.php"  style="font-family:Quicksand, sans-serif;">Sign up</a>
+				<a href="user-registration.html"  style="font-family:Quicksand, sans-serif;">Sign up</a>
 			</div>
 			<div class="signup-align">
 				<form name="login" style="font-family:Quicksand, sans-serif;background-color:rgba(44,40,52,0.73);width:320px;padding:40px;" action="" method="post"
 					onsubmit="return loginValidation()">
 					<div class="signup-heading">Login</div>
-				<?php if(!empty($loginResult)){?>
-				<div class="error-msg"><?php echo $loginResult;?></div>
-				<?php }?>
+				<?html if(!empty($loginResult)){?>
+				<div class="error-msg"><?html echo $loginResult;?></div>
+				<?html }?>
 				
       		    <div>
 				<img class="rounded img-fluid" id="image" style="width:auto;height:auto;" src="assets/img/logo.png"></div>
@@ -71,7 +71,7 @@ if (! empty($_POST["login-btn"])) {
             href="#">Forgot your e mail or password?</a>
 		</form>
                 <button class="btn btn-light" name="login-btn"
-                        style="width:100%;margin-bottom:10px;background-color:darkred;" type="button"><a href="index.php">HOME</a> </button>
+                        style="width:100%;margin-bottom:10px;background-color:darkred;" type="button"><a href="index.html">HOME</a> </button>
 			
 			</div>
 		</div>

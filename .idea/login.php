@@ -1,17 +1,17 @@
 
-<?php
+<?html
 session_start();
 error_reporting(0);
 
-require_once('database.php');
-require_once('library.php');
+require_once('database.html');
+require_once('library.html');
 $error = "";
 if(isset($_POST['txtusername'])){
 	$error = checkUser($_POST['txtusername'],$_POST['txtpassword'],$_POST['OfficeName']);
 }//if
 
 
-require_once('database.php');
+require_once('database.html');
 $sql = "SELECT DISTINCT(off_name)
 		FROM tbl_offices";
 $result = dbQuery($sql);
@@ -20,12 +20,12 @@ $result = dbQuery($sql);
 
 
 
-include 'header.php';
+include 'header.html';
 
 
 
 if(isset($_POST['registration'])){
-header("user-registration.php");
+header("user-registration.html");
 	
 }
 
@@ -71,7 +71,7 @@ header("user-registration.php");
 
 
 								<font color="#FF0000" style="font-size:12px;">
-								<?php echo $error; ?>
+								<?html echo $error; ?>
 								</font>
 
 
@@ -104,5 +104,5 @@ header("user-registration.php");
   </tr>
 </tbody></table>
 </td></tr></tbody></table>
-<?php include 'footer.php';?>
+<?html include 'footer.html';?>
 

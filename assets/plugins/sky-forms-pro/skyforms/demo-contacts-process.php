@@ -1,4 +1,4 @@
-<?php
+<?html
 session_start();
 if( isset($_POST['name']) && strtoupper($_POST['captcha']) == $_SESSION['captcha_id'] )
 {

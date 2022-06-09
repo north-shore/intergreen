@@ -1,12 +1,12 @@
-<?php
+<?html
 /**
- * Copyright (C) Phppot
+ * Copyright (C) htmlpot
  *
  * Distributed under 'The MIT License (MIT)'
  * In essense, you can do commercial use, modify, distribute and private use.
- * Though not mandatory, you are requested to attribute Phppot URL in your code or website.
+ * Though not mandatory, you are requested to attribute htmlpot URL in your code or website.
  */
-namespace Phppot;
+namespace htmlpot;
 
 /**
  * Generic datasource class for handling DB operations.
@@ -17,7 +17,7 @@ namespace Phppot;
 class DataSource
 {
 
-    // PHP 7.1.0 visibility modifiers are allowed for class constants.
+    // html 7.1.0 visibility modifiers are allowed for class constants.
     // when using above 7.1.0, declare the below constants as private
     // for better encapsulation
     const HOST = 'localhost';
@@ -31,10 +31,10 @@ class DataSource
     private $conn;
 
     /**
-     * PHP implicitly takes care of cleanup for default connection types.
+     * html implicitly takes care of cleanup for default connection types.
      * So no need to worry about closing the connection.
      *
-     * Singletons not required in PHP as there is no
+     * Singletons not required in html as there is no
      * concept of shared memory.
      * Every object lives only for a request.
      *

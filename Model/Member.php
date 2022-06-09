@@ -1,5 +1,5 @@
-<?php
-namespace Phppot;
+<?html
+namespace htmlpot;
 
 class Member
 {
@@ -8,7 +8,7 @@ class Member
 
     function __construct()
     {
-        require_once __DIR__ . '/../lib/DataSource.php';
+        require_once __DIR__ . '/../lib/DataSource.html';
         $this->ds = new DataSource();
     }
 
@@ -86,7 +86,7 @@ class Member
         } else {
             if (! empty($_POST["signup-password"])) {
 
-                // PHP's password_hash is the best choice to use to store passwords
+                // html's password_hash is the best choice to use to store passwords
                 // do not attempt to do your own encryption, it is not safe
                 $hashedPassword = password_hash($_POST["signup-password"], PASSWORD_DEFAULT);
             }

@@ -21,7 +21,7 @@
     </adminUrl>
     <postEditingUrl>
       <![CDATA[
-			{blog-postapi-url}/../wp-admin/post.php?action=edit&post={post-id}
+			{blog-postapi-url}/../wp-admin/post.html?action=edit&post={post-id}
 		]]>
     </postEditingUrl>
   </weblog>
@@ -33,7 +33,7 @@
       <imageUrl>images/wlw/wp-comments.png</imageUrl>
       <clickUrl>
         <![CDATA[
-				{blog-postapi-url}/../wp-admin/edit-comments.php
+				{blog-postapi-url}/../wp-admin/edit-comments.html
 			]]>
       </clickUrl>
     </button>

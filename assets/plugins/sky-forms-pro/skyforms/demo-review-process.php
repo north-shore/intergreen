@@ -1,4 +1,4 @@
-<?php
+<?html
 if( isset($_POST['name']) )
 {
 	$to = 'vokyvon@gmail.com'; // Replace with your email	
